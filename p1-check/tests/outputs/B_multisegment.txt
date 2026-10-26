@@ -1,0 +1,6 @@
+00000000  01 00 00 01 10 00 04 00  00 00 00 00 45 4c 46 00 
+Mini-ELF version 1
+Entry point 0x100
+There are 4 program headers, starting at offset 16 (0x10)
+There is no symbol table present
+There is no string table present

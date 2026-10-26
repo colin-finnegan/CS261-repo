@@ -1,0 +1,17 @@
+Segment   Offset    VirtAddr  FileSize  Type      Flag      
+  00      0x0060    0x010e    0x0015    CODE      R X
+  01      0x0075    0x0200    0x000b    DATA      RW 
+  02      0x0080    0x0300    0x0000    CODE      R X
+  03      0x0090    0x0400    0x000b    DATA      RW 
+
+Contents of memory from 0100 to 0123:
+  0100  00 00 00 00 00 00 00 00  00 00 00 00 00 00 30 f3
+  0110  0f 00 00 00 20 31 40 13  fd ff ff ff 60 31 70 08
+  0120  01 00 00
+
+Contents of memory from 0200 to 020b:
+  0200  aa bb cc dd 00 00 00 dd  00 00 00
+
+Contents of memory from 0400 to 040b:
+  0400  70 08 01 00 00 aa bb cc  dd 00 00
+

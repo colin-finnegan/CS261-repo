@@ -1,0 +1,55 @@
+==1366715== Memcheck, a memory error detector
+==1366715== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==1366715== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==1366715== Command: ../y86 -ms inputs/multiseg_zero.o
+==1366715== 
+==1366715== Use of uninitialised value of size 8
+==1366715==    at 0x48CB052: _itoa_word (_itoa.c:184)
+==1366715==    by 0x48D5C9B: __printf_buffer (vfprintf-process-arg.c:155)
+==1366715==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==1366715==    by 0x48CC1B2: printf (printf.c:33)
+==1366715==    by 0x10A186: dump_memory (p2-load.c:319)
+==1366715==    by 0x1096AB: main (main.c:120)
+==1366715== 
+==1366715== Conditional jump or move depends on uninitialised value(s)
+==1366715==    at 0x48CB064: _itoa_word (_itoa.c:184)
+==1366715==    by 0x48D5C9B: __printf_buffer (vfprintf-process-arg.c:155)
+==1366715==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==1366715==    by 0x48CC1B2: printf (printf.c:33)
+==1366715==    by 0x10A186: dump_memory (p2-load.c:319)
+==1366715==    by 0x1096AB: main (main.c:120)
+==1366715== 
+==1366715== Conditional jump or move depends on uninitialised value(s)
+==1366715==    at 0x48D5D85: __printf_buffer (vfprintf-process-arg.c:186)
+==1366715==    by 0x48D773A: __vfprintf_internal (vfprintf-internal.c:1544)
+==1366715==    by 0x48CC1B2: printf (printf.c:33)
+==1366715==    by 0x10A186: dump_memory (p2-load.c:319)
+==1366715==    by 0x1096AB: main (main.c:120)
+==1366715== 
+Segment   Offset    VirtAddr  FileSize  Type      Flag
+  00      0x0060    0x010e    0x0015    CODE      R X
+  01      0x0075    0x0200    0x000b    DATA      RW 
+  02      0x0080    0x0300    0x0000    CODE      R X
+  03      0x0090    0x0400    0x000b    DATA      RW 
+
+Contents of memory from 0100 to 0123:
+  0100  00 00 00 00 00 00 00 00  00 00 00 00 00 00 30 f3
+  0110  0f 00 00 00 20 31 40 13  fd ff ff ff 60 31 70 08
+  0120  01 00 00                                        
+
+Contents of memory from 0200 to 020b:
+  0200  aa bb cc dd 00 00 00 dd  00 00 00               
+
+Contents of memory from 0400 to 040b:
+  0400  70 08 01 00 00 aa bb cc  dd 00 00               
+
+==1366715== 
+==1366715== HEAP SUMMARY:
+==1366715==     in use at exit: 0 bytes in 0 blocks
+==1366715==   total heap usage: 5 allocs, 5 frees, 21,032 bytes allocated
+==1366715== 
+==1366715== All heap blocks were freed -- no leaks are possible
+==1366715== 
+==1366715== Use --track-origins=yes to see where uninitialised values come from
+==1366715== For lists of detected and suppressed errors, rerun with: -s
+==1366715== ERROR SUMMARY: 42 errors from 3 contexts (suppressed: 0 from 0)

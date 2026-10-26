@@ -1,0 +1,15 @@
+Disassembly of executable contents:
+  0x000:                       |  .pos 0x000 code
+  0x000: 705000000000000000    |    jmp    0x50
+
+  0x050:                       |  .pos 0x050 code
+  0x050:                       |  _start:
+  0x050: 30f80100000000000000  |    irmovq 0x1, %r8
+  0x05a: 30f90200000000000000  |    irmovq 0x2, %r9
+  0x064: 30fa0300000000000000  |    irmovq 0x3, %r10
+  0x06e: 30fb0400000000000000  |    irmovq 0x4, %r11
+  0x078: 30fc0500000000000000  |    irmovq 0x5, %r12
+  0x082: 30fd0600000000000000  |    irmovq 0x6, %r13
+  0x08c: 30fe0700000000000000  |    irmovq 0x7, %r14
+  0x096: 00                    |    halt  
+

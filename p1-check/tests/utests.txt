@@ -1,0 +1,13 @@
+Running suite(s): Default
+Usage: y86 <option(s)> mini-elf-file
+ Options are:
+  -h      Display usage
+  -H      Show the Mini-ELF header
+Options must not be repeated neither explicitly nor implicitly.
+00000000  b8 30 0b c6 6f 56 00 00  46 e8 0a c6 45 4c 46 00 
+Mini-ELF version 12472
+Entry point 0xc60b
+There are 0 program headers, starting at offset 22127 (0x566f)
+There is a symbol table starting at offset 59462 (0xe846)
+There is a string table starting at offset 50698 (0xc60a)
+100%: Checks: 5, Failures: 0, Errors: 0

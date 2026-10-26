@@ -1,0 +1,15 @@
+==1366742== Memcheck, a memory error detector
+==1366742== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==1366742== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==1366742== Command: ../y86 -s inputs/bad-phdr_magic.o
+==1366742== 
+Failed to Read Program Header
+==1366742== 
+==1366742== HEAP SUMMARY:
+==1366742==     in use at exit: 0 bytes in 0 blocks
+==1366742==   total heap usage: 4 allocs, 4 frees, 16,896 bytes allocated
+==1366742== 
+==1366742== All heap blocks were freed -- no leaks are possible
+==1366742== 
+==1366742== For lists of detected and suppressed errors, rerun with: -s
+==1366742== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

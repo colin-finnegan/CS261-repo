@@ -1,0 +1,10 @@
+Disassembly of data contents:
+  0x200:                       |  .pos 0x200 rodata
+  0x200: 30313233343536373839  |    .STRING "0123456789"
+  0x20a: 00                    |  
+  0x20b: 68656c6c6f20776f726c  |    .STRING "hello world"
+  0x215: 6400                  |  
+  0x217: 6162636465666768696a  |    .STRING "abcdefghijklmnopqrstuvwxyz"
+  0x221: 6b6c6d6e6f7071727374  |  
+  0x22b: 75767778797a00        |  
+

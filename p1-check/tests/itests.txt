@@ -1,0 +1,13 @@
+C_simple_hex                   pass
+C_help                         pass
+B_just_check_header            pass
+B_just_check_header2           pass
+B_multisegment                 pass
+B_stripped                     pass
+A_invalid_param                pass
+A_missing_filename             pass
+A_nonexistent_file             pass
+A_no_elf                       pass
+A_short_header                 pass
+A_both_options                 pass
+No memory leak found.

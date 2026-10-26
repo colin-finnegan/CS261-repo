@@ -1,0 +1,39 @@
+==3529023== Memcheck, a memory error detector
+==3529023== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==3529023== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==3529023== Command: ../y86 inputs/simple.o -e
+==3529023== 
+Entry execution point at 0x0100
+Initial dump of Y86 CPU:
+  %rip: 0000000000000100   flags: SF0 ZF0 OF0  AOK
+  %rax: 0000000000000000    %rcx: 0000000000000000
+  %rdx: 0000000000000000    %rbx: 0000000000000000
+  %rsp: 0000000000000000    %rbp: 0000000000000000
+  %rsi: 0000000000000000    %rdi: 0000000000000000
+   %r8: 0000000000000000     %r9: 0000000000000000
+  %r10: 0000000000000000    %r11: 0000000000000000
+  %r12: 0000000000000000    %r13: 0000000000000000
+  %r14: 0000000000000000
+
+Post-Exec dump of Y86 CPU:
+  %rip: 0000000000000117   flags: SF0 ZF0 OF0  HLT
+  %rax: 0000000000002468    %rcx: 0000000000000000
+  %rdx: 0000000000000000    %rbx: 000000000000369c
+  %rsp: 0000000000000000    %rbp: 0000000000000000
+  %rsi: 0000000000000000    %rdi: 0000000000000000
+   %r8: 0000000000000000     %r9: 0000000000000000
+  %r10: 0000000000000000    %r11: 0000000000000000
+  %r12: 0000000000000000    %r13: 0000000000000000
+  %r14: 0000000000000000
+
+Total execution count: 4 instructions
+
+==3529023== 
+==3529023== HEAP SUMMARY:
+==3529023==     in use at exit: 0 bytes in 0 blocks
+==3529023==   total heap usage: 5 allocs, 5 frees, 20,972 bytes allocated
+==3529023== 
+==3529023== All heap blocks were freed -- no leaks are possible
+==3529023== 
+==3529023== For lists of detected and suppressed errors, rerun with: -s
+==3529023== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

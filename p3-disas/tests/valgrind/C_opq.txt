@@ -1,0 +1,22 @@
+==2701627== Memcheck, a memory error detector
+==2701627== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==2701627== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==2701627== Command: ../y86 -d inputs/opq.o
+==2701627== 
+Disassembly of executable contents:
+  0x100:                       |  .pos 0x100 code
+  0x100:                       |  _start:
+  0x100: 6023                  |    addq   %rdx, %rbx
+  0x102: 6101                  |    subq   %rax, %rcx
+  0x104: 6245                  |    andq   %rsp, %rbp
+  0x106: 6367                  |    xorq   %rsi, %rdi
+
+==2701627== 
+==2701627== HEAP SUMMARY:
+==2701627==     in use at exit: 0 bytes in 0 blocks
+==2701627==   total heap usage: 5 allocs, 5 frees, 20,972 bytes allocated
+==2701627== 
+==2701627== All heap blocks were freed -- no leaks are possible
+==2701627== 
+==2701627== For lists of detected and suppressed errors, rerun with: -s
+==2701627== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

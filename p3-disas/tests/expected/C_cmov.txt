@@ -1,0 +1,11 @@
+Disassembly of executable contents:
+  0x100:                       |  .pos 0x100 code
+  0x100:                       |  _start:
+  0x100: 2001                  |    rrmovq %rax, %rcx
+  0x102: 2123                  |    cmovle %rdx, %rbx
+  0x104: 2245                  |    cmovl  %rsp, %rbp
+  0x106: 2367                  |    cmove  %rsi, %rdi
+  0x108: 2423                  |    cmovne %rdx, %rbx
+  0x10a: 2545                  |    cmovge %rsp, %rbp
+  0x10c: 2667                  |    cmovg  %rsi, %rdi
+

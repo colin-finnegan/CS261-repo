@@ -1,0 +1,11 @@
+--- outputs/A_bad_nostack_debug.txt	2025-05-05 15:24:27.430178825 -0400
++++ expected/A_bad_nostack_debug.txt	2024-04-06 11:42:49.000000000 -0400
+@@ -12,7 +12,7 @@
+ 
+ Executing: call   0x10a
+ Post-Exec dump of Y86 CPU:
+-  %rip: 0000000000000100   flags: SF0 ZF0 OF0  ADR
++  %rip: 000000000000010a   flags: SF0 ZF0 OF0  ADR
+   %rax: 0000000000000000    %rcx: 0000000000000000
+   %rdx: 0000000000000000    %rbx: 0000000000000000
+   %rsp: 0000000000000000    %rbp: 0000000000000000

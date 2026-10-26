@@ -1,0 +1,8 @@
+.pos 0 code
+    jmp _start
+
+.pos 0xf00 code
+_start:
+    irmovq $10, %rbx        # Later, manually edit the .o file to replace rB with F
+    mrmovq (%rbx), %rax
+

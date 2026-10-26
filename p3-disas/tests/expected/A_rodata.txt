@@ -1,0 +1,4 @@
+Disassembly of data contents:
+  0x200:                       |  .pos 0x200 rodata
+  0x200: 68656c6c6f00          |    .STRING "hello"
+

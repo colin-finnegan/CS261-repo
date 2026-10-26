@@ -1,0 +1,14 @@
+Disassembly of executable contents:
+  0x000:                       |  .pos 0x000 code
+  0x000: 700001000000000000    |    jmp    0x100
+
+  0x100:                       |  .pos 0x100 code
+  0x100:                       |  _start:
+  0x100: 30f4000f000000000000  |    irmovq 0xf00, %rsp
+  0x10a: 801401000000000000    |    call   0x114
+  0x113: 00                    |    halt  
+  0x114: 30f00200000000000000  |    irmovq 0x2, %rax
+  0x11e: 30f1f6ffffffffffffff  |    irmovq 0xfffffffffffffff6, %rcx
+  0x128: 6010                  |    addq   %rcx, %rax
+Invalid opcode: 0x63
+

@@ -1,0 +1,20 @@
+Disassembly of executable contents:
+  0x000:                       |  .pos 0x000 code
+  0x000: 700001000000000000    |    jmp    0x100
+
+  0x100:                       |  .pos 0x100 code
+  0x100:                       |  _start:
+  0x100: 30f4000f000000000000  |    irmovq 0xf00, %rsp
+  0x10a: 801401000000000000    |    call   0x114
+  0x113: 00                    |    halt  
+  0x114: 30f00200000000000000  |    irmovq 0x2, %rax
+  0x11e: 30f1f6ffffffffffffff  |    irmovq 0xfffffffffffffff6, %rcx
+  0x128: 6010                  |    addq   %rcx, %rax
+  0x12a: 6300                  |    xorq   %rax, %rax
+  0x12c: 30f0ffffffffffffff7f  |    irmovq 0x7fffffffffffffff, %rax
+  0x136: 30f10100000000000000  |    irmovq 0x1, %rcx
+  0x140: 6010                  |    addq   %rcx, %rax
+  0x142: 30f00000000000000080  |    irmovq 0x8000000000000000, %rax
+  0x14c: 6110                  |    subq   %rcx, %rax
+  0x14e: 90                    |    ret   
+

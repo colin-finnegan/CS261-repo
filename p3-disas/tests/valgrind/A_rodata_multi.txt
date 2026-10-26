@@ -1,0 +1,20 @@
+==2701757== Memcheck, a memory error detector
+==2701757== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==2701757== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==2701757== Command: ../y86 -D inputs/rodata_multi.o
+==2701757== 
+Disassembly of data contents:
+  0x200:                       |  .pos 0x200 rodata
+  0x200: 666f6f00              |    .STRING "foo"
+  0x204: 7730307400            |    .STRING "w00t"
+  0x209: 757020646f776e00      |    .STRING "up down"
+
+==2701757== 
+==2701757== HEAP SUMMARY:
+==2701757==     in use at exit: 0 bytes in 0 blocks
+==2701757==   total heap usage: 5 allocs, 5 frees, 20,992 bytes allocated
+==2701757== 
+==2701757== All heap blocks were freed -- no leaks are possible
+==2701757== 
+==2701757== For lists of detected and suppressed errors, rerun with: -s
+==2701757== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

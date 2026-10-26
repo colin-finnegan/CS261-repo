@@ -1,0 +1,7 @@
+Disassembly of executable contents:
+  0x100:                       |  .pos 0x100 code
+  0x100:                       |  _start:
+  0x100: 30f08877665544332211  |    irmovq 0x1122334455667788, %rax
+  0x10a: 40122143658778563412  |    rmmovq %rcx, 0x1234567887654321(%rdx)
+  0x114: 50127856341221436587  |    mrmovq 0x8765432112345678(%rdx), %rcx
+

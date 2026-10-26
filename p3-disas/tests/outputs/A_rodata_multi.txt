@@ -1,0 +1,6 @@
+Disassembly of data contents:
+  0x200:                       |  .pos 0x200 rodata
+  0x200: 666f6f00              |    .STRING "foo"
+  0x204: 7730307400            |    .STRING "w00t"
+  0x209: 757020646f776e00      |    .STRING "up down"
+

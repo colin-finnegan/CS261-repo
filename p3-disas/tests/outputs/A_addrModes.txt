@@ -1,0 +1,21 @@
+Disassembly of executable contents:
+  0x000:                       |  .pos 0x000 code
+  0x000: 700001000000000000    |    jmp    0x100
+
+  0x100:                       |  .pos 0x100 code
+  0x100:                       |  _start:
+  0x100: 30f30003000000000000  |    irmovq 0x300, %rbx
+  0x10a: 50030000000000000000  |    mrmovq 0x0(%rbx), %rax
+  0x114: 400f0803000000000000  |    rmmovq %rax, 0x308
+  0x11e: 30f31003000000000000  |    irmovq 0x310, %rbx
+  0x128: 50131000000000000000  |    mrmovq 0x10(%rbx), %rcx
+
+Disassembly of data contents:
+  0x300:                       |  .pos 0x300 data
+  0x300: 6400000000000000      |    .QUAD 0x64
+  0x308: 0000000000000000      |    .QUAD 0x0
+  0x310: 0100000000000000      |    .QUAD 0x1
+  0x318: 0200000000000000      |    .QUAD 0x2
+  0x320: 0300000000000000      |    .QUAD 0x3
+  0x328: 0400000000000000      |    .QUAD 0x4
+

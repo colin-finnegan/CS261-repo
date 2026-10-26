@@ -1,0 +1,40 @@
+==2701698== Memcheck, a memory error detector
+==2701698== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==2701698== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==2701698== Command: ../y86 -d inputs/invalid-rA.o
+==2701698== 
+Disassembly of executable contents:
+  0x000:                       |  .pos 0x000 code
+  0x000: 700002000000000000    |    jmp    0x200
+
+  0x100:                       |  .pos 0x100 code
+  0x100: 10                    |    nop   
+  0x101: a0af                  |    pushq  %r10
+  0x103: b0df                  |    popq   %r13
+Invalid opcode: 0x63
+
+  0x200:                       |  .pos 0x200 code
+  0x200:                       |  _start:
+  0x200: 30f4000f000000000000  |    irmovq 0xf00, %rsp
+  0x20a: 801402000000000000    |    call   0x214
+  0x213: 00                    |    halt  
+  0x214: 30f00200000000000000  |    irmovq 0x2, %rax
+  0x21e: 30f1f6ffffffffffffff  |    irmovq 0xfffffffffffffff6, %rcx
+  0x228: 6010                  |    addq   %rcx, %rax
+  0x22a: 6300                  |    xorq   %rax, %rax
+  0x22c: 30f0ffffffffffffff7f  |    irmovq 0x7fffffffffffffff, %rax
+  0x236: 30f10100000000000000  |    irmovq 0x1, %rcx
+  0x240: 6010                  |    addq   %rcx, %rax
+  0x242: 30f00000000000000080  |    irmovq 0x8000000000000000, %rax
+  0x24c: 6110                  |    subq   %rcx, %rax
+  0x24e: 90                    |    ret   
+
+==2701698== 
+==2701698== HEAP SUMMARY:
+==2701698==     in use at exit: 0 bytes in 0 blocks
+==2701698==   total heap usage: 5 allocs, 5 frees, 21,032 bytes allocated
+==2701698== 
+==2701698== All heap blocks were freed -- no leaks are possible
+==2701698== 
+==2701698== For lists of detected and suppressed errors, rerun with: -s
+==2701698== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

@@ -1,0 +1,14 @@
+Disassembly of data contents:
+  0x300:                       |  .pos 0x300 data
+  0x300: 2211ffeeddccbbaa      |    .QUAD 0xaabbccddeeff1122
+  0x308: 2300000000000000      |    .QUAD 0x23
+
+  0x400:                       |  .pos 0x400 rodata
+  0x400: 48656c6c6f00          |    .STRING "Hello"
+  0x406: 4861766520616e206e69  |    .STRING "Have an nice day"
+  0x410: 63652064617900        |  
+  0x417: 71776572747975696f70  |    .STRING "qwertyuiopasdfghjklzxcvbnm1234567890"
+  0x421: 6173646667686a6b6c7a  |  
+  0x42b: 786376626e6d31323334  |  
+  0x435: 35363738393000        |  
+

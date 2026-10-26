@@ -1,0 +1,39 @@
+.pos 0 code
+    jmp _start
+
+.pos 0x100 code
+_start:
+    irmovq _stack, %rsp
+    call main
+    halt
+
+main:
+    irmovq  $2 , %rax
+    irmovq  $-10, %rcx
+    addq    %rcx, %rax
+    xorq    %rax, %rax
+    irmovq  $0x7fffffffffffffff , %rax  # MAX_INT
+    irmovq  $1 , %rcx
+    addq    %rcx,  %rax                 # Positive Overflow
+    xorq    %rax, %rax
+    subq    %rcx, %rax 
+    addq    %rcx, %rax
+    irmovq  $0x8000000000000000 , %rax  # MIN_INT
+    subq    %rcx, %rax                  # Negative Overflow    
+    irmovq  num2, %r9
+    rmmovq  %rax, (%r9)    
+    ret
+
+.pos 0x300 data
+num1:
+    .quad 0xaabbccddeeff1122
+num2:
+    .quad 35
+    
+.pos 0x400 rodata
+    .string "Hello"
+    .string "Have an nice day"
+    .string "qwertyuiopasdfghjklzxcvbnm1234567890"
+    
+.pos 0xf00 stack
+_stack:
